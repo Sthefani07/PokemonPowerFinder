@@ -1,24 +1,54 @@
-/* Estilo do body */
+/* Efeito de fundo com gradiente animado */
 body {
-  background-color: #fbe7fe;
-  font-family: 'Press Start 2P', cursive, sans-serif; /* Fonte estilo videogame */
-  color: #4a006e;
+  background: linear-gradient(120deg, #fce4ff, #ffb3d9, #dab3ff);
+  background-size: 200% 200%;
+  animation: gradientAnimation 6s ease infinite;
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  color: #4d0070;
   text-align: center;
   margin: 0;
   padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Usa toda a altura da tela */
+  height: 100vh;
+  overflow: hidden;
+}
+
+@keyframes gradientAnimation {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Contêiner para partículas */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 4px),
+              radial-gradient(circle, rgba(255, 255, 255, 0.2) 2px, transparent 4px);
+  background-size: 3% 3%, 5% 5%;
+  background-position: 0 0, 50px 50px;
+  animation: particleAnimation 10s linear infinite;
+}
+
+@keyframes particleAnimation {
+  from { background-position: 0 0, 50px 50px; }
+  to { background-position: 100px 100px, 150px 150px; }
 }
 
 /* Estilo do título principal */
 h1 {
   font-size: 3.5rem;
-  color: #ff99cc;
-  text-shadow: 3px 3px 0 #9e00d8, -3px -3px 0 #ff66b2, 3px -3px 0 #ff66b2, -3px 3px 0 #9e00d8; /* Efeito de borda dupla */
+  color: #ffb3d9;
+  text-shadow: 3px 3px 0 #b300b3, -3px -3px 0 #e68aab, 3px -3px 0 #e68aab, -3px 3px 0 #b300b3;
   margin-bottom: 2rem;
-  animation: flicker 1.5s infinite alternate; /* Animação de piscada */
+  animation: flicker 1.5s infinite alternate;
 }
 
 /* Animação de piscada */
@@ -34,13 +64,13 @@ h1 {
   align-items: center;
   justify-content: center;
   padding: 40px;
-  width: 90%; /* Ocupa mais espaço da tela */
+  width: 90%;
   max-width: 800px;
-  border: 8px solid #ff99cc;
-  border-radius: 0px; /* Bordas retas para um toque mais retro */
-  background-color: rgba(255, 153, 204, 0.1);
-  box-shadow: 0px 0px 30px 10px rgba(158, 0, 216, 0.4);
-  animation: pulse 2s infinite; /* Animação de pulso */
+  border: 6px solid #ffb3d9;
+  border-radius: 10px;
+  background-color: rgba(255, 204, 229, 0.2);
+  box-shadow: 0px 0px 20px 5px rgba(179, 0, 179, 0.4);
+  animation: pulse 2s infinite;
 }
 
 /* Animação de pulso para o container */
@@ -52,16 +82,16 @@ h1 {
 /* Estilo do botão */
 button {
   background-color: #ff66b2;
-  border: 3px solid #ff99cc;
-  border-radius: 8px;
+  border: 3px solid #ffb3d9;
+  border-radius: 10px;
   color: white;
   font-size: 1.8rem;
   padding: 15px 30px;
   cursor: pointer;
-  box-shadow: 0px 4px 10px rgba(158, 0, 216, 0.3);
+  box-shadow: 0px 4px 10px rgba(179, 0, 179, 0.3);
   transition: all 0.2s ease;
   margin-top: 1.5rem;
-  animation: buttonPress 0.3s infinite alternate; /* Animação de vibração */
+  animation: buttonPress 0.3s infinite alternate;
 }
 
 /* Animação de vibração para o botão */
@@ -71,20 +101,20 @@ button {
 }
 
 button:hover {
-  background-color: #d100a8;
-  box-shadow: 0px 4px 12px rgba(221, 0, 168, 0.6);
+  background-color: #cc0099;
+  box-shadow: 0px 4px 12px rgba(179, 0, 179, 0.6);
   transform: translateY(-3px) scale(1.05);
 }
 
 button:active {
-  transform: translateY(0) scale(1); /* Efeito ao clicar */
+  transform: translateY(0) scale(1);
 }
 
 /* Estilo para o nome do Pokémon */
 h2 {
   font-size: 2.5rem;
   color: #ff66b2;
-  text-shadow: 2px 2px #4a006e; /* Sombra mais intensa */
+  text-shadow: 2px 2px #4d0070;
   margin-top: 20px;
   text-transform: uppercase;
 }
@@ -92,7 +122,7 @@ h2 {
 /* Estilo para o texto */
 p {
   font-size: 1.5rem;
-  color: #4a006e;
+  color: #4d0070;
   margin-top: 10px;
 }
 
@@ -100,9 +130,9 @@ p {
 img {
   width: 220px;
   height: 220px;
-  border-radius: 8px; /* Bordas retas para estilo mais retro */
-  border: 5px solid #ff99cc;
-  box-shadow: 0px 0px 20px 8px rgba(255, 153, 204, 0.6);
+  border-radius: 10px;
+  border: 4px solid #ffb3d9;
+  box-shadow: 0px 0px 20px 8px rgba(255, 179, 217, 0.6);
   margin-top: 20px;
   animation: float 3s ease-in-out infinite;
 }
