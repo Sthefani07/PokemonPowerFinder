@@ -1,8 +1,17 @@
-# React + Vite
+# Pokémon Finder ✨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to **Pokémon Finder**, a fun and interactive web application where users can find out which Pokémon matches their personality. Every time the user clicks the "Find Your Pokémon!" button, a random Pokémon appears along with its name, ability, and a special message, "This is the Pokémon that most resembles you!" The app is styled with a unique "mystical, sophisticated pink aesthetic," blending elegance with a touch of magic.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Random Pokémon Generator**: Every click on the button displays a different Pokémon, fetched randomly.
+- **Pokémon Information**: See the Pokémon’s name, main ability, and an image.
+- **Personalized Message**: A fun message accompanies each Pokémon, enhancing user interaction.
+
+## Tech Stack
+
+- **React**: JavaScript library for building the user interface.
+- **PokéAPI**: A RESTful API that provides Pokémon data for each request.
+
+
+
