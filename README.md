@@ -1,11 +1,11 @@
 # Pokémon Finder ✨
 
-![alt text](image-1.png)
+https://github.com/user-attachments/assets/8a83d099-9f85-4489-a362-e6c092f98a96
 
 
 Welcome to **Pokémon Finder**, a fun and interactive web application where users can find out which Pokémon matches their personality. Every time the user clicks the "Find Your Pokémon!" button, a random Pokémon appears along with its name, ability, and a special message, "This is the Pokémon that most resembles you!" The app is styled with a unique "mystical, sophisticated pink aesthetic," blending elegance with a touch of magic.
 
-![alt text](image-2.png)
+https://github.com/user-attachments/assets/2281b9a1-faa8-4f91-8e4d-90407abfad52
 
 ## Features
 
