@@ -1,69 +1,114 @@
-
-
+/* Estilo do body */
 body {
   background-color: #fbe7fe;
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: 'Press Start 2P', cursive, sans-serif; /* Fonte estilo videogame */
   color: #4a006e;
   text-align: center;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Usa toda a altura da tela */
 }
 
-
+/* Estilo do título principal */
 h1 {
-  font-size: 3rem;
+  font-size: 3.5rem;
   color: #ff99cc;
-  text-shadow: 2px 2px #9e00d8;
-  margin-bottom: 1rem;
+  text-shadow: 3px 3px 0 #9e00d8, -3px -3px 0 #ff66b2, 3px -3px 0 #ff66b2, -3px 3px 0 #9e00d8; /* Efeito de borda dupla */
+  margin-bottom: 2rem;
+  animation: flicker 1.5s infinite alternate; /* Animação de piscada */
+}
+
+/* Animação de piscada */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
 }
 
 /* Estilo do container principal */
-div {
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
+  padding: 40px;
+  width: 90%; /* Ocupa mais espaço da tela */
+  max-width: 800px;
+  border: 8px solid #ff99cc;
+  border-radius: 0px; /* Bordas retas para um toque mais retro */
+  background-color: rgba(255, 153, 204, 0.1);
+  box-shadow: 0px 0px 30px 10px rgba(158, 0, 216, 0.4);
+  animation: pulse 2s infinite; /* Animação de pulso */
+}
+
+/* Animação de pulso para o container */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.03); }
 }
 
 /* Estilo do botão */
 button {
   background-color: #ff66b2;
-  border: none;
-  border-radius: 20px;
+  border: 3px solid #ff99cc;
+  border-radius: 8px;
   color: white;
-  font-size: 1.5rem;
-  padding: 10px 20px;
+  font-size: 1.8rem;
+  padding: 15px 30px;
   cursor: pointer;
-  box-shadow: 0px 5px 15px rgba(158, 0, 216, 0.3);
-  transition: all 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(158, 0, 216, 0.3);
+  transition: all 0.2s ease;
+  margin-top: 1.5rem;
+  animation: buttonPress 0.3s infinite alternate; /* Animação de vibração */
+}
+
+/* Animação de vibração para o botão */
+@keyframes buttonPress {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(3px); }
 }
 
 button:hover {
   background-color: #d100a8;
-  box-shadow: 0px 5px 15px rgba(221, 0, 168, 0.6);
-  transform: scale(1.05);
+  box-shadow: 0px 4px 12px rgba(221, 0, 168, 0.6);
+  transform: translateY(-3px) scale(1.05);
 }
 
-/* Estilo para o Pokémon */
+button:active {
+  transform: translateY(0) scale(1); /* Efeito ao clicar */
+}
+
+/* Estilo para o nome do Pokémon */
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: #ff66b2;
-  text-shadow: 1px 1px #4a006e;
+  text-shadow: 2px 2px #4a006e; /* Sombra mais intensa */
   margin-top: 20px;
+  text-transform: uppercase;
 }
 
+/* Estilo para o texto */
 p {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #4a006e;
   margin-top: 10px;
 }
 
+/* Estilo da imagem do Pokémon */
 img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid #ff99cc;
-  box-shadow: 0px 5px 15px rgba(255, 153, 204, 0.5);
+  width: 220px;
+  height: 220px;
+  border-radius: 8px; /* Bordas retas para estilo mais retro */
+  border: 5px solid #ff99cc;
+  box-shadow: 0px 0px 20px 8px rgba(255, 153, 204, 0.6);
   margin-top: 20px;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Animação de flutuação */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
